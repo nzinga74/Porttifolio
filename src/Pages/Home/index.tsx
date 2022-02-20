@@ -3,6 +3,8 @@ import Header from "../../components/Header";
 import Stacks from "./Sections/Stacks";
 import Company from "./Sections/Company";
 import Tech from "./Sections/Tech";
+import Project from "./Sections/Project";
+import Footer from "../../components/Footer";
 const Home: FC = () => {
   return (
     <>
@@ -10,6 +12,8 @@ const Home: FC = () => {
       <Stacks />
       <Company />
       <Tech />
+      <Project />
+      <Footer />
     </>
   );
 };

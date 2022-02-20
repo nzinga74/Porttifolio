@@ -5,9 +5,12 @@ export const MenuHeader = styled.div`
   background-color: #2d2e32;
   padding: 20px;
   height: 70px;
+`;
+export const Section = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding-top: 20px;
 `;
 
 export const MenuList = styled.ul`

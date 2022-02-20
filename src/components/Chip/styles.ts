@@ -8,4 +8,5 @@ export const ChipSpan = styled.span`
   border-radius: 4px;
   box-sizing: none;
   font-weight: 300;
+  margin-right: 8px;
 `;

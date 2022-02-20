@@ -8,16 +8,30 @@ export const StackSider = styled.div`
   width: 100%;
   display: flex;
   padding-top: 100px;
+  @media only screen and (max-width: 800px) {
+    flex-wrap: wrap;
+    padding: 50px 60px;
+  }
 `;
 export const StackSideRight = styled.div`
   width: 60%;
+  @media only screen and (max-width: 800px) {
+    width: 100%;
+  }
 `;
 export const StackSideRightContent = styled.div`
   padding: 130px;
   padding-top: 30px;
+  @media only screen and (max-width: 800px) {
+    padding: 0px;
+    padding-top: 30px;
+  }
 `;
 export const StackSideLeft = styled.div`
   width: 40%;
+  @media only screen and (max-width: 800px) {
+    width: 100%;
+  }
 `;
 export const StackSideRightTitle = styled.h2`
   color: white;

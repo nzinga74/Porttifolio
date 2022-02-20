@@ -14,8 +14,8 @@ const NumberCard: React.FC<PropsTYpe> = ({ number, content }) => {
         <Number>{number}</Number>
       </NumberTextView>
       <CardTextView>
-        {content.map((value) => (
-          <Text>{value}</Text>
+        {content.map((value, index) => (
+          <Text key={index}>{value}</Text>
         ))}
       </CardTextView>
     </NumberCardView>
