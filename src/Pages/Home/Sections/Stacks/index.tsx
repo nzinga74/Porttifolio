@@ -10,17 +10,26 @@ import {
   RightContent,
 } from "./styled";
 import { Container } from "../../../../styles";
+import { motion } from "framer-motion";
 import StackButton from "./components/StackButton";
 const Stacks: React.FC = () => {
   return (
     <StackSection>
       <Container>
         <StackSider>
-          <StackSideLeft>
+          <StackSideLeft
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.2, delay: 0.2 }}
+          >
             <StackButton />
             <StackButton />
           </StackSideLeft>
-          <StackSideRight>
+          <StackSideRight
+            initial={{ opacity: 0, y: -100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2, delay: 1.2 }}
+          >
             <StackSideRightContent>
               <StackSideRightTitle>
                 Ola meu nome é Nzinga António!

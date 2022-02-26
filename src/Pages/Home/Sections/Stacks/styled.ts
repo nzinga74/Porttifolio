@@ -1,4 +1,6 @@
 import styled from "styled-components";
+
+import { motion } from "framer-motion";
 export const StackSection = styled.section`
   width: 100%;
   padding-bottom: 5px;
@@ -13,7 +15,7 @@ export const StackSider = styled.div`
     padding: 50px 60px;
   }
 `;
-export const StackSideRight = styled.div`
+export const StackSideRight = styled(motion.div)`
   width: 60%;
   @media only screen and (max-width: 800px) {
     width: 100%;
@@ -27,7 +29,7 @@ export const StackSideRightContent = styled.div`
     padding-top: 30px;
   }
 `;
-export const StackSideLeft = styled.div`
+export const StackSideLeft = styled(motion.div)`
   width: 40%;
   @media only screen and (max-width: 800px) {
     width: 100%;

@@ -7,6 +7,7 @@ export const GlobalStyle = createGlobalStyle`
 		box-sizing:border-box;
 		font-family: 'Roboto', sans-serif;
 		font-weight: 400;
+	
 	}
 
 `;
