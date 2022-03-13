@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { motion } from "framer-motion";
 export const CompanySection = styled.section`
   width: 100%;
 
@@ -10,7 +10,7 @@ export const Title = styled.h2`
   font-weight: 400;
   margin-bottom: 40px;
 `;
-export const ContentSection = styled.div`
+export const ContentSection = styled(motion.div)`
   padding: 100px 170px;
   @media only screen and (max-width: 800px) {
     padding: 60px 30px;

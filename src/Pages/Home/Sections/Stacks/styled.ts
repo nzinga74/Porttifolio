@@ -21,7 +21,7 @@ export const StackSideRight = styled(motion.div)`
     width: 100%;
   }
 `;
-export const StackSideRightContent = styled.div`
+export const StackSideRightContent = styled(motion.div)`
   padding: 130px;
   padding-top: 30px;
   @media only screen and (max-width: 800px) {

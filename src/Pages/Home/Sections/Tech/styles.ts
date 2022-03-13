@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const TechSection = styled.div`
@@ -10,14 +11,14 @@ export const Section = styled.section`
     flex-wrap: wrap;
   }
 `;
-export const RightSide = styled.div`
+export const RightSide = styled(motion.div)`
   width: 50%;
   padding: 60px;
   @media only screen and (max-width: 800px) {
     width: 100%;
   }
 `;
-export const LeftSide = styled.div`
+export const LeftSide = styled(motion.div)`
   width: 50%;
   @media only screen and (max-width: 800px) {
     width: 100%;

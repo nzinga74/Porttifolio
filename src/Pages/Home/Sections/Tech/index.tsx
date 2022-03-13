@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   TechSection,
   RightSide,
@@ -18,15 +18,37 @@ import JavascriptIcon from "../../../../assets/js.png";
 import PythonIcon from "../../../../assets/python.png";
 import ReactIcon from "../../../../assets/react.png";
 import TYpescriptIcon from "../../../../assets/ts.png";
+import { LeftSideVariants, RightSideVariants } from "./animate";
+import { useInView } from "react-intersection-observer";
+import { useAnimation } from "framer-motion";
+
 const Tech: React.FC = () => {
+  const { ref, inView } = useInView({
+    threshold: 0.4,
+  });
+
+  const animation = useAnimation();
+
+  useEffect(() => {
+    if (inView) animation.start("animate");
+  }, [inView]);
+
   return (
     <TechSection>
       <Container>
-        <Section>
-          <LeftSide>
+        <Section ref={ref}>
+          <LeftSide
+            variants={LeftSideVariants}
+            initial="initial"
+            animate={animation}
+          >
             <LottieAnimation />
           </LeftSide>
-          <RightSide>
+          <RightSide
+            variants={RightSideVariants}
+            initial="initial"
+            animate={animation}
+          >
             <Title>Tecnologias</Title>
             <RightDeclaration>
               Eu tenho conhecimento das melhores tecnologias do mercado

@@ -1,12 +1,13 @@
-import styled, { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const MenuHeader = styled.div`
+export const MenuHeader = styled(motion.div)`
   width: 100%;
   background-color: #2d2e32;
   padding: 20px;
   height: 70px;
 `;
-export const Section = styled.div`
+export const Section = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: space-between;

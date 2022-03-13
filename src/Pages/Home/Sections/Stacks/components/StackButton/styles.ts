@@ -1,6 +1,13 @@
 import styled from "styled-components";
 
-export const ButtonStack = styled.div`
+/* 
+  & my interfaces
+*/
+interface ButtonStackProps {
+  isActive: boolean;
+}
+
+export const ButtonStack = styled.div<ButtonStackProps>`
   width: 100%;
   height: 160px;
   background-color: #2d2e32;
@@ -9,10 +16,15 @@ export const ButtonStack = styled.div`
   margin-bottom: 8px;
   cursor: pointer;
   padding: 36px;
+
+  h3 {
+    color: ${(props) => (props.isActive ? "#6ff4a5" : "#fff")};
+  }
 `;
 export const ButtonStackTitle = styled.h3`
   color: white;
   font-weight: 300;
+  transition: color 1s;
 `;
 export const ButtonStackContent = styled.p`
   color: #7c7d81;

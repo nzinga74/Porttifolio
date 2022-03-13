@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { motion } from "framer-motion";
 export const Headers = styled.div`
   background-color: #2d2e32;
   width: 100%;
@@ -19,7 +19,7 @@ export const HeaderSideRight = styled.div`
   height: 560px;
 `;
 
-export const HeaderSideLeft = styled.div`
+export const HeaderSideLeft = styled(motion.div)`
   width: 40%;
   height: 560px;
   margin-top: 100px;

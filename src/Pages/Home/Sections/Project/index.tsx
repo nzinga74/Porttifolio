@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   CompanySection,
   Title,
@@ -10,20 +10,33 @@ import {
 } from "./styles";
 import { Container } from "../../../../styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faQuoteRight,
-  faStar,
-  faCode,
-} from "@fortawesome/free-solid-svg-icons";
+import { faCode } from "@fortawesome/free-solid-svg-icons";
 import Chip from "../../../../components/Chip";
 import Slider from "react-slick";
 import { Carrouselsettings } from "../../../../constants";
+import { useInView } from "react-intersection-observer";
+import { useAnimation } from "framer-motion";
+import { projectVariants } from "./animation";
 const Project: React.FC = () => {
+  const { ref, inView } = useInView({
+    threshold: 0.4,
+  });
+
+  const animation = useAnimation();
+
+  useEffect(() => {
+    if (inView) animation.start("animate");
+  }, [inView]);
   return (
     <>
       <CompanySection>
         <Container>
-          <ContentSection>
+          <ContentSection
+            ref={ref}
+            variants={projectVariants}
+            initial="initial"
+            animate={animation}
+          >
             <Title>Projetos Desenvolvidos</Title>
             <Slider {...Carrouselsettings}>
               <div>
